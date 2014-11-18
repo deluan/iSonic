@@ -14,13 +14,17 @@ apply plugin: 'spring-boot'
 
 jar {
     baseName = 'isonic'
-    version =  '0.1.0'
+    version = '0.1.0'
 }
 
 idea {
     module {
+        name = 'iSonic'
+        excludeDirs += [file('tmp'), file('gradle'), file('.idea')]
         inheritOutputDirs = false
         outputDir = file("$buildDir/classes/main/")
+        downloadJavadoc = true
+        downloadSources = true
     }
 }
 
