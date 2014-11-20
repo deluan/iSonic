@@ -8,17 +8,6 @@ public class HelloController {
 
     @RequestMapping("/")
     def index() {
-        return "Greetings from iSonic 0.0!"
+        return "Greetings from iSonic!"
     }
-
-    @RequestMapping("/rest/ping.view")
-    def ping() {
-        [
-                "subsonic-response": [
-                        status : 'ok',
-                        version: '1.10.2'
-                ]
-        ]
-    }
-
 }

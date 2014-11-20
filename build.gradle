@@ -18,6 +18,9 @@ jar {
 }
 
 idea {
+    project {
+        jdkName = '1.7'
+    }
     module {
         name = 'iSonic'
         excludeDirs += [file('tmp'), file('gradle'), file('.idea')]

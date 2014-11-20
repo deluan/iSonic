@@ -17,18 +17,18 @@ import org.springframework.data.solr.repository.config.EnableSolrRepositories
 @EnableAutoConfiguration
 @ComponentScan
 @EnableSolrRepositories("com.deluan.isonic.repository")
-public class Application {
+public class ISonicApplication {
 
     private Logger logger = LoggerFactory.getLogger(this.class)
 
     static void main(String[] args) {
-        def ctx = SpringApplication.run(Application.class, args)
-
-        println("Let's inspect the beans provided by Spring Boot:")
-
-        ctx.beanDefinitionNames.sort().each { beanName ->
-            println("   ${beanName}")
-        }
+        def ctx = SpringApplication.run(ISonicApplication.class, args)
+//
+//        println("Let's inspect the beans provided by Spring Boot:")
+//
+//        ctx.beanDefinitionNames.sort().each { beanName ->
+//            println("   ${beanName}")
+//        }
     }
 
     @Bean
