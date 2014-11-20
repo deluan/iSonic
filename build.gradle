@@ -52,6 +52,10 @@ dependencies {
     testCompile 'org.spockframework:spock-spring:0.7-groovy-2.0'
 }
 
+configurations {
+    all*.exclude group: 'log4j', module: 'log4j'
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2'
 }
