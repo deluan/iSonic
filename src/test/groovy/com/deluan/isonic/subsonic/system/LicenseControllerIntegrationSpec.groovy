@@ -1,6 +1,7 @@
 package com.deluan.isonic.subsonic.system
 
 import com.deluan.isonic.ISonicApplication
+import com.deluan.isonic.subsonic.model.License
 import com.deluan.isonic.subsonic.model.SubsonicResponse
 import org.springframework.boot.test.IntegrationTest
 import org.springframework.boot.test.SpringApplicationContextLoader
@@ -14,16 +15,17 @@ import spock.lang.Specification
 @IntegrationTest
 @WebAppConfiguration
 @ContextConfiguration(loader = SpringApplicationContextLoader, classes = ISonicApplication)
-class PingControllerIntegrationSpec extends Specification {
+class LicenseControllerIntegrationSpec extends Specification {
 
-    void "should return a valid ping response"() {
+    void "should return a valid license response"() {
         when:
-          ResponseEntity entity = new RestTemplate().getForEntity("http://localhost:8080/rest/ping.view", SubsonicResponse)
+          ResponseEntity entity = new RestTemplate().getForEntity("http://localhost:8080/rest/getLicense.view", SubsonicResponse)
 
         then:
-          def expected = SubsonicResponse.withEmptyElement()
+          def expected = SubsonicResponse.withElement(new License())
           entity.statusCode == HttpStatus.OK
           entity.body.status == expected.status
           entity.body.version == expected.version
+          entity.body.license.valid == expected.license.valid
     }
 }

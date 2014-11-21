@@ -1,15 +1,16 @@
 package com.deluan.isonic.subsonic.system
 
+import com.deluan.isonic.subsonic.model.License
 import com.deluan.isonic.subsonic.model.SubsonicResponse
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class PingController {
+class LicenseController {
 
-    @RequestMapping("/rest/ping.view")
-    def ping() {
-        SubsonicResponse.withEmptyElement()
+    @RequestMapping("/rest/getLicense.view")
+    def getLicense() {
+        SubsonicResponse.withElement(new License())
     }
 
 }
