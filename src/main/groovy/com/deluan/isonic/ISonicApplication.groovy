@@ -3,8 +3,6 @@ package com.deluan.isonic
 import org.apache.solr.client.solrj.SolrServer
 import org.apache.solr.client.solrj.embedded.EmbeddedSolrServer
 import org.apache.solr.core.CoreContainer
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.context.annotation.Bean
@@ -18,8 +16,6 @@ import org.springframework.data.solr.repository.config.EnableSolrRepositories
 @ComponentScan
 @EnableSolrRepositories("com.deluan.isonic.repository")
 public class ISonicApplication {
-
-    private Logger logger = LoggerFactory.getLogger(this.class)
 
     static void main(String[] args) {
         def ctx = SpringApplication.run(ISonicApplication.class, args)
