@@ -4,7 +4,7 @@ buildscript {
     }
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.9.RELEASE'
-        classpath 'org.springframework:springloaded:1.2.0.RELEASE'
+        classpath 'org.springframework:springloaded:1.2.1.RELEASE'
     }
 }
 
@@ -55,6 +55,14 @@ dependencies {
 
 configurations {
     all*.exclude group: 'log4j', module: 'log4j'
+}
+
+bootRun {
+    // Allows parameters to be passed to the application. Ex:
+    // -PbootArgs="-Dspring.profiles.active=external-solr"
+    if (project.hasProperty('bootArgs')) {
+        jvmArgs project.bootArgs.split('\\s+')
+    }
 }
 
 task wrapper(type: Wrapper) {
