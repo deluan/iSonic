@@ -23,12 +23,12 @@ public class ISonicApplication {
 
     static void main(String[] args) {
         def ctx = SpringApplication.run(ISonicApplication.class, args)
-//
-//        println("Let's inspect the beans provided by Spring Boot:")
-//
-//        ctx.beanDefinitionNames.sort().each { beanName ->
-//            println("   ${beanName}")
-//        }
+
+        println("Let's inspect the beans provided by Spring Boot:")
+
+        ctx.beanDefinitionNames.sort().each { beanName ->
+            println("   ${beanName}")
+        }
     }
 
     @Bean
