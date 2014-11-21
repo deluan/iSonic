@@ -1,8 +1,8 @@
 package com.deluan.isonic.subsonic.system
 
 import com.deluan.isonic.ISonicApplication
-import com.deluan.isonic.subsonic.model.License
-import com.deluan.isonic.subsonic.model.SubsonicResponse
+import com.deluan.isonic.subsonic.responses.License
+import com.deluan.isonic.subsonic.responses.SubsonicResponse
 import org.springframework.boot.test.IntegrationTest
 import org.springframework.boot.test.SpringApplicationContextLoader
 import org.springframework.http.HttpStatus

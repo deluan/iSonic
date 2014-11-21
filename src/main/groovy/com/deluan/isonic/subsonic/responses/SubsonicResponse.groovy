@@ -1,4 +1,4 @@
-package com.deluan.isonic.subsonic.model
+package com.deluan.isonic.subsonic.responses
 
 import javax.xml.bind.annotation.*
 
