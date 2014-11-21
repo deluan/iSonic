@@ -44,9 +44,10 @@ dependencies {
         exclude module: 'spring-boot-starter-tomcat'
     }
     compile 'org.springframework.boot:spring-boot-starter-jetty'
-    compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.boot:spring-boot-starter-data-solr'
+    compile 'org.springframework:spring-context-support'
     compile 'org.apache.solr:solr-core:4.10.2'
+    compile 'org.quartz-scheduler:quartz:2.2.1'
     testCompile 'junit:junit'
     testCompile 'org.springframework:spring-test'
     testCompile 'org.spockframework:spock-spring:0.7-groovy-2.0'
