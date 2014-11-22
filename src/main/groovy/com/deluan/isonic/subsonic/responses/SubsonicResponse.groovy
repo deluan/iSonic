@@ -1,11 +1,14 @@
 package com.deluan.isonic.subsonic.responses
 
+import groovy.transform.EqualsAndHashCode
+
 import javax.xml.bind.annotation.XmlAccessType
 import javax.xml.bind.annotation.XmlAccessorType
 import javax.xml.bind.annotation.XmlRootElement
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlRootElement(name = 'subsonic-response', namespace = 'http://subsonic.org/restapi')
+@EqualsAndHashCode
 class SubsonicResponse extends HashMap {
     public static final String PROTOCOL_VERSION = '1.0.0'
 
