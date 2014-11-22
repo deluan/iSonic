@@ -1,3 +1,10 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'cobertura'
+apply plugin: 'com.github.kt3k.coveralls'
+
+
 buildscript {
     repositories {
         mavenCentral()
@@ -5,12 +12,11 @@ buildscript {
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.9.RELEASE'
         classpath 'org.springframework:springloaded:1.2.1.RELEASE'
+        classpath 'net.saliman:gradle-cobertura-plugin:2.0.0' // cobertura plugin
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
+
     }
 }
-
-apply plugin: 'groovy'
-apply plugin: 'idea'
-apply plugin: 'spring-boot'
 
 jar {
     baseName = 'isonic'
@@ -68,3 +74,6 @@ bootRun {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2'
 }
+
+cobertura.coverageFormats = ['html', 'xml'] // coveralls plugin depends on xml format report
+cobertura.coverageSourceDirs = sourceSets.main.groovy.srcDirs

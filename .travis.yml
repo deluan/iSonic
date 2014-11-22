@@ -1,8 +1,16 @@
 language: java
 jdk:
   - oraclejdk7
+
 script:
-  - ./gradlew cleanTest test
+  - ./gradlew cleanTest test cobertura
+
+env:
+  - TERM=dumb
+
 branches:
   only:
     - master
+
+after_success:
+- ./gradlew coveralls
