@@ -4,7 +4,7 @@ iSonic
 Future iTunes/[Subsonic](http://www.subsonic.org/pages/api.jsp) adapter
 
 [![Build Status](https://travis-ci.org/deluan/iSonic.svg?branch=master)](https://travis-ci.org/deluan/iSonic)
-
+[![Coverage Status](https://img.shields.io/coveralls/deluan/iSonic.svg)](https://coveralls.io/r/deluan/iSonic)
 
 
 ###Useful Links:
