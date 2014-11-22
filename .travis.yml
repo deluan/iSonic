@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - oraclejdk7
+script:
+  - ./gradlew cleanTest test
+branches:
+  only:
+    - master
