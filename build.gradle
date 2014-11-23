@@ -70,6 +70,7 @@ dependencies {
 
 configurations {
     all*.exclude group: 'log4j', module: 'log4j'
+    all*.exclude group: 'xml-apis', module: 'xml-apis'
 }
 
 bootRun {
