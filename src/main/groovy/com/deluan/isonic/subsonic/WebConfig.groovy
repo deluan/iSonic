@@ -17,7 +17,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 useJaf(false).
                 defaultContentType(MediaType.APPLICATION_JSON).
                 mediaType("xml", MediaType.APPLICATION_XML).
-                mediaType("json", MediaType.APPLICATION_JSON).
-                mediaType("jsonp", MediaType.APPLICATION_JSON)
+                mediaType("json", MediaType.APPLICATION_JSON)
     }
 }
