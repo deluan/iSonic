@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody
 
 import javax.servlet.http.HttpServletRequest
 
-@ControllerAdvice(basePackageClasses = AdvisableController)
+@ControllerAdvice(basePackageClasses = Advisable)
 public class ExceptionHandlerAdvice implements Loggable {
 
     @ExceptionHandler(value = [Exception.class])

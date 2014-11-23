@@ -29,7 +29,7 @@ class ExceptionHandlerAdviceSpec extends IntegrationSpec {
 }
 
 @RestController
-class TestController implements AdvisableController {
+class TestController implements Advisable {
     @RequestMapping("/test/error")
     def raiseError() {
         throw new Exception("Something bad just happened")
