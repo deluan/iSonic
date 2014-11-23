@@ -11,7 +11,7 @@ class LicenseController implements Advisable {
 
     @RequestMapping("/rest/getLicense.view")
     def getLicense() {
-        SubsonicResponse.withElement(new License())
+        new SubsonicResponse(license: new License())
     }
 
 }

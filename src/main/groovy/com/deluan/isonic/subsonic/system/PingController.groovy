@@ -10,7 +10,7 @@ class PingController implements Advisable {
 
     @RequestMapping("/rest/ping.view")
     def ping() {
-        SubsonicResponse.withEmptyElement()
+        new SubsonicResponse()
     }
 
 }

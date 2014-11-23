@@ -13,7 +13,7 @@ class PingControllerIntegrationSpec extends IntegrationSpec {
           ResponseEntity entity = new RestTemplate().getForEntity("${baseUrl()}/rest/ping.view", SubsonicResponse)
 
         then:
-          def expected = SubsonicResponse.withEmptyElement()
+          def expected = new SubsonicResponse()
           entity.statusCode == HttpStatus.OK
           entity.body.status == expected.status
           entity.body.version == expected.version
