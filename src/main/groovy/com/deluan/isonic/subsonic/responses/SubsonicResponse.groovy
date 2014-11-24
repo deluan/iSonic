@@ -24,7 +24,6 @@ class SubsonicResponse {
     SubsonicError error
 
     License license
-    MusicFolders musicFolders
 
     public static withError(SubsonicError error) {
         new SubsonicResponse(status: 'failed', error: error)
