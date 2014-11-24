@@ -2,7 +2,6 @@ iSonic
 ======
 [![Build Status](https://travis-ci.org/deluan/iSonic.svg?branch=master)](https://travis-ci.org/deluan/iSonic)
 [![Coverage Status](https://img.shields.io/coveralls/deluan/iSonic.svg)](https://coveralls.io/r/deluan/iSonic)
-[![Codeship Status for deluan/iSonic](https://codeship.com/projects/2f5eab60-5621-0132-9513-1e96a1aee1da/status)](https://codeship.com/projects/49465)
 
 iSonic is an implementation of the [Subsonic project API](http://www.subsonic.org/pages/api.jsp), but instead of having
 its own music library like the original [Subsonic application](http://www.subsonic.org), it interacts directly with
