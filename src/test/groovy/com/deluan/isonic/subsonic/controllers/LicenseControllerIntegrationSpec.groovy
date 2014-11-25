@@ -1,11 +1,14 @@
-package com.deluan.isonic.subsonic.system
+package com.deluan.isonic.subsonic.controllers
 
 import com.deluan.isonic.subsonic.IntegrationSpec
 import com.deluan.isonic.subsonic.responses.License
 import com.deluan.isonic.subsonic.responses.SubsonicResponse
 import org.springframework.http.HttpStatus
+import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.client.RestTemplate
+
+import static org.springframework.http.MediaType.*
 
 class LicenseControllerIntegrationSpec extends IntegrationSpec {
 

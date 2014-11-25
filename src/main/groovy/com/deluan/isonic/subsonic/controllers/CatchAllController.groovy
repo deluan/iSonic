@@ -1,4 +1,4 @@
-package com.deluan.isonic.subsonic.system
+package com.deluan.isonic.subsonic.controllers
 
 import com.deluan.isonic.subsonic.advice.Advisable
 import com.deluan.isonic.subsonic.responses.SubsonicResponse

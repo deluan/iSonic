@@ -1,4 +1,4 @@
-package com.deluan.isonic.subsonic.system
+package com.deluan.isonic.subsonic.controllers
 
 import com.deluan.isonic.subsonic.IntegrationSpec
 import com.deluan.isonic.subsonic.responses.SubsonicResponse

@@ -14,7 +14,7 @@ import spock.lang.Specification
 abstract class IntegrationSpec extends Specification {
 
     @Value('${local.server.port}')
-    String serverPort;
+    String serverPort = '8080';
 
     protected baseUrl() {
         "http://localhost:${serverPort}"
