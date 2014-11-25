@@ -5,9 +5,6 @@ jdk:
 script:
   - ./gradlew cleanTest test cobertura
 
-env:
-  - TERM=dumb
-
 branches:
   only:
     - master
