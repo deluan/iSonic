@@ -5,3 +5,4 @@ tmp
 .gradle
 build
 solr/collection1/data
+application.yml
