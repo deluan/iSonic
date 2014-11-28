@@ -63,6 +63,7 @@ dependencies {
     compile 'org.springframework:spring-context-support'
     compile 'org.apache.solr:solr-core:4.10.2'
     compile 'org.quartz-scheduler:quartz:2.2.1'
+    compile 'com.worldsworstsoftware:itunes-utilities:1.1-SNAPSHOT'
     testCompile 'junit:junit'
     testCompile 'org.springframework:spring-test'
     testCompile 'org.spockframework:spock-spring:0.7-groovy-2.0'
