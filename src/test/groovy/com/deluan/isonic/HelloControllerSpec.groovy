@@ -1,7 +1,8 @@
-import com.deluan.isonic.HelloController
+package com.deluan.isonic
+
 import spock.lang.Specification
 
-class SimpleSpec extends Specification {
+class HelloControllerSpec extends Specification {
 
     def "should return a greeting"() {
         expect:
