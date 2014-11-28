@@ -2,9 +2,6 @@ language: java
 jdk:
   - oraclejdk7
 
-before_install:
-  - ./gradlew initGitDependencies
-
 script:
   - ./gradlew cleanTest test cobertura
 
