@@ -3,7 +3,7 @@ jdk:
   - oraclejdk7
 
 script:
-  - ./gradlew cleanTest test cobertura
+  - ./gradlew initGitDependencies cleanTest test cobertura
 
 branches:
   only:
