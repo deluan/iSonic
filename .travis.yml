@@ -2,8 +2,11 @@ language: java
 jdk:
   - oraclejdk7
 
+before_script:
+  - ./gradlew initGitDependencies
+
 script:
-  - ./gradlew initGitDependencies cleanTest test cobertura
+  - ./gradlew cleanTest test cobertura
 
 branches:
   only:
