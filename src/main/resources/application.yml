@@ -2,3 +2,9 @@ logging:
   level:
     org.springframework.data.solr: DEBUG
     com.deluan: DEBUG
+
+spring.jackson:
+  deserialization:
+    unwrap_root_value: true
+  serialization:
+    wrap_root_value: true
