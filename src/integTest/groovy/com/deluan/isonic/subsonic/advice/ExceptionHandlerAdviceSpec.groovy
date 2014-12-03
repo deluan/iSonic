@@ -15,7 +15,7 @@ class ExceptionHandlerAdviceSpec extends IntegrationSpec {
 
     void "should return a valid error response"() {
         when:
-          ResponseEntity entity = new RestTemplate().getForEntity("${baseUrl()}/test/error", SubsonicResponse)
+          ResponseEntity entity = restTemplate.getForEntity("${baseUrl}/test/error", SubsonicResponse)
 
         then:
           def expected = withError(GENERIC)

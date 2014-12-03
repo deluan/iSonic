@@ -14,7 +14,7 @@ class LicenseControllerIntegrationSpec extends IntegrationSpec {
 
     void "should return a valid license response"() {
         when:
-          ResponseEntity entity = new RestTemplate().getForEntity("${baseUrl()}/rest/getLicense.view", SubsonicResponse)
+          ResponseEntity entity = restTemplate.getForEntity("${baseUrl}/rest/getLicense.view", SubsonicResponse)
 
         then:
           def expected = new SubsonicResponse(license: new License())

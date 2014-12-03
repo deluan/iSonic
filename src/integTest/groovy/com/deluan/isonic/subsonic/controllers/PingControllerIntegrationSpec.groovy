@@ -10,7 +10,7 @@ class PingControllerIntegrationSpec extends IntegrationSpec {
 
     void "should return a valid ping response"() {
         when:
-          ResponseEntity entity = new RestTemplate().getForEntity("${baseUrl()}/rest/ping.view", SubsonicResponse)
+          ResponseEntity entity = restTemplate.getForEntity("${baseUrl}/rest/ping.view", SubsonicResponse)
 
         then:
           def expected = new SubsonicResponse()
