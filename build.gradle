@@ -8,9 +8,9 @@ apply plugin: 'com.github.kt3k.coveralls'
 buildscript {
     repositories {
         mavenLocal()
-        mavenCentral()
-        maven { url "http://repo.spring.io/snapshot" }
-        maven { url "http://repo.spring.io/milestone" }
+        jcenter()
+        maven { url 'http://repo.spring.io/snapshot' }
+        maven { url 'http://repo.spring.io/milestone' }
     }
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.0.RELEASE'
@@ -44,23 +44,24 @@ idea {
 
 repositories {
     mavenLocal()
-    mavenCentral()
-    maven { url "http://maven.restlet.org" }
-    maven { url "http://repo.spring.io/snapshot" }
-    maven { url "http://repo.spring.io/milestone" }
+    jcenter()
+    maven { url 'http://maven.restlet.org' }
+    maven { url 'http://repo.spring.io/snapshot' }
+    maven { url 'http://repo.spring.io/milestone' }
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.3.7'
+    compile 'org.codehaus.groovy:groovy-all'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile('org.springframework.boot:spring-boot-starter-data-solr')
     compile 'org.springframework:spring-context-support'
     compile 'org.apache.solr:solr-core:4.10.2'
     compile 'org.quartz-scheduler:quartz:2.2.1'
-//    compile 'com.worldsworstsoftware:itunes-utilities:1.1-SNAPSHOT'
+    compile 'com.worldsworstsoftware:itunes-utilities:1.1'
     testCompile 'junit:junit'
     testCompile 'org.springframework:spring-test'
     testCompile 'org.spockframework:spock-spring:0.7-groovy-2.0'
+    testCompile 'cglib:cglib-nodep:2.2'
 }
 
 configurations {
